@@ -4,6 +4,8 @@ from werkzeug.datastructures import FileStorage
 from flask import send_file
 
 from ..util import query_util, coco_util
+from config import Config
+
 from database import (
     ImageModel,
     DatasetModel,

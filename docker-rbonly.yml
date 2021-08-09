@@ -1,0 +1,15 @@
+version: "3"
+
+networks:
+  cocoannotator:
+    external: false
+
+services:
+  messageq:
+    image: rabbitmq:3
+    container_name: annotator_message_q
+    environment:
+      - DEFAULT_USER=user
+      - DEFAULT_PASS=password
+    networks:
+      - cocoannotator
